@@ -4,9 +4,9 @@ import pytesseract
 
 from matplotlib import pyplot as plt
 
-import base64_img
+from base64_img import base64_to_img
 
-img = base64_img.base64_to_img()
+img = base64_to_img()
 
 cv2.imshow("Image", img)
 cv2.waitKey(0)
