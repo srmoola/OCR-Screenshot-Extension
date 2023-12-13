@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 
-def base64_to_img() -> any:
+def base64_to_img():
     with open("image.txt", "r") as f:
         split_base64 = f.read().partition(",")
         print(split_base64[0])
