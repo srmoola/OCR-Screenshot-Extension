@@ -12,8 +12,6 @@
   <p align="center">
     Ever wanted to copy something from a website? This extension allows you to copy text even when a website blocks it!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
     ·
