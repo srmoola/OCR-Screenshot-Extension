@@ -1,7 +1,7 @@
 from __main__ import app
 from base64_img import base64_to_img, show_image
 from flask import request, jsonify
-import cv2
+from flask_cors import cross_origin
 
 
 @app.route("/", methods=["GET"])
@@ -10,6 +10,7 @@ def MainLink():
 
 
 @app.route("/get-text", methods=["POST"])
+@cross_origin()
 def GetTextLink():
     if request.method == "POST":
         try:

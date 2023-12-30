@@ -1,3 +1,21 @@
+const requestTextData = async (imageLink) => {
+  try {
+    const response = await fetch("http://127.0.0.1:5000/get-text", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ text_data: imageLink }),
+    });
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error:", error);
+    throw error;
+  }
+};
+
 setTimeout(function () {
   const image = document.getElementById("target");
 
@@ -10,8 +28,13 @@ setTimeout(function () {
 
   const button = document.getElementById("crop");
 
-  button.addEventListener("click", () => {
-    var croppedimage = cropper.getCroppedCanvas().toDataURL("image/png");
-    console.log(croppedimage);
+  button.addEventListener("click", async () => {
+    const croppedImage = cropper.getCroppedCanvas().toDataURL("image/png");
+    try {
+      const textData = await requestTextData(croppedImage);
+      console.log(textData.result);
+    } catch (error) {
+      console.error("Error:", error);
+    }
   });
 }, 500);
