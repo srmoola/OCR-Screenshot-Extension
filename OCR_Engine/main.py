@@ -1,13 +1,12 @@
 import pandas as pd
 import cv2
 import pytesseract
+from flask import Flask
+from flask_cors import CORS
 
-from matplotlib import pyplot as plt
+app = Flask(__name__)
+CORS(app)
+import routes
 
-from base64_img import base64_to_img
-
-img = base64_to_img()
-
-cv2.imshow("Image", img)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+if __name__ == "__main__":
+    app.run()
