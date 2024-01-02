@@ -10,9 +10,3 @@ def base64_to_img(image_link):
     im_arr = np.frombuffer(im_bytes, dtype=np.uint8)
     img = cv2.imdecode(im_arr, flags=cv2.IMREAD_COLOR)
     return img
-
-
-def show_image(img):
-    cv2.imshow("Image", img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()

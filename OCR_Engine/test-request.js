@@ -4,7 +4,7 @@ function requestTextData() {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ text_data: "Hello" }),
+    body: JSON.stringify({ text_data: "" }),
   });
   response
     .then((response) => response.json())

@@ -21,7 +21,6 @@ def GetTextLink():
                 text_data = json_data["text_data"]
                 img = base64_to_img(text_data)
                 get_text = pytesseract.image_to_string(img)
-                print(get_text)
                 return jsonify({"result": get_text})
             else:
                 return jsonify({"error": "Missing 'text_data' key in JSON data"}), 400
