@@ -1,7 +1,8 @@
 from __main__ import app
-from base64_img import base64_to_img, show_image
+from base64_img import base64_to_img
 from flask import request, jsonify
 from flask_cors import cross_origin
+import pytesseract
 
 
 @app.route("/", methods=["GET"])
@@ -18,7 +19,10 @@ def GetTextLink():
 
             if "text_data" in json_data:
                 text_data = json_data["text_data"]
-                return jsonify({"result": f"Received text data: {text_data}"})
+                img = base64_to_img(text_data)
+                get_text = pytesseract.image_to_string(img)
+                print(get_text)
+                return jsonify({"result": get_text})
             else:
                 return jsonify({"error": "Missing 'text_data' key in JSON data"}), 400
         except Exception as e:

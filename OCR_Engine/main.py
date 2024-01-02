@@ -1,6 +1,5 @@
 import pandas as pd
 import cv2
-import pytesseract
 from flask import Flask
 from flask_cors import CORS
 

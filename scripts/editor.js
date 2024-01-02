@@ -8,11 +8,15 @@ const requestTextData = async (imageLink) => {
       body: JSON.stringify({ text_data: imageLink }),
     });
 
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
     const data = await response.json();
+
     return data;
   } catch (error) {
     console.error("Error:", error);
-    throw error;
   }
 };
 
@@ -30,11 +34,7 @@ setTimeout(function () {
 
   button.addEventListener("click", async () => {
     const croppedImage = cropper.getCroppedCanvas().toDataURL("image/png");
-    try {
-      const textData = await requestTextData(croppedImage);
-      console.log(textData.result);
-    } catch (error) {
-      console.error("Error:", error);
-    }
+    const textData = await requestTextData(croppedImage);
+    console.log(textData);
   });
 }, 500);
