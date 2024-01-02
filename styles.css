@@ -50,3 +50,31 @@ img {
   box-shadow: none;
   transform: translateY(0);
 }
+
+::backdrop {
+  background-color: #1a1a1a;
+  opacity: 0.90;
+}
+
+.show {
+  margin-top: 100px;
+}
+
+dialog {
+  padding: 50px;
+  border-radius: 5px;
+  border: 0;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+dialog[open],
+dialog::backdrop {
+  animation: show 500ms ease;
+}
+
+p {
+  border-color: red;
+}

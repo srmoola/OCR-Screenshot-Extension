@@ -31,10 +31,25 @@ setTimeout(function () {
   });
 
   const button = document.getElementById("crop");
+  const dialog = document.querySelector("dialog");
+  const closeButton = document.querySelector("dialog button");
+  const textDisplay = document.getElementById("ocr-text");
+  const copyButton = document.getElementById("copy");
 
   button.addEventListener("click", async () => {
     const croppedImage = cropper.getCroppedCanvas().toDataURL("image/png");
     const textData = await requestTextData(croppedImage);
-    console.log(textData);
+    textDisplay.innerText = textData.result;
+    copyButton.innerText = "Copy to Clipboard";
+    dialog.showModal();
+  });
+
+  closeButton.addEventListener("click", () => {
+    dialog.close();
+  });
+
+  copyButton.addEventListener("click", () => {
+    navigator.clipboard.writeText(textDisplay.innerText);
+    copyButton.innerText = "Copied!";
   });
 }, 500);
