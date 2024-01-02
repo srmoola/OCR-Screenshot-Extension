@@ -7,50 +7,6 @@ img {
   max-width: 100%;
 }
 
-.button-27 {
-  position: fixed;
-  z-index: 2;
-  appearance: none;
-  background-color: #1ed760;
-  border: 2px solid #1a1a1a;
-  border-radius: 15px;
-  box-sizing: border-box;
-  color: #000;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
-  font-weight: 600;
-  line-height: normal;
-  margin: 0;
-  min-height: 60px;
-  min-width: 0;
-  outline: none;
-  padding: 16px 24px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  will-change: transform;
-}
-
-.button-27:disabled {
-  pointer-events: none;
-}
-
-.button-27:hover {
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  transform: translateY(-2px);
-}
-
-.button-27:active {
-  box-shadow: none;
-  transform: translateY(0);
-}
-
 ::backdrop {
   background-color: #1a1a1a;
   opacity: 0.90;
@@ -75,6 +31,92 @@ dialog::backdrop {
   animation: show 500ms ease;
 }
 
-p {
-  border-color: red;
+.btn {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.btn:hover .btn-slide-show-text1 {
+  margin-left: 65px;
+}
+
+.btn-layered-3d> ::before {
+  box-sizing: border-box;
+}
+
+.btn-layered-3d {
+  width: 180px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0px;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 1.15em 2em;
+  border-radius: 0.75em;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out 0s;
+  background: 0.15s ease-out 0s;
+}
+
+.btn-layered-3d::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  inset: 0px;
+  border-radius: inherit;
+  transform: translate3d(0px, 0.75em, -1em);
+  transition: transform 0.15s ease-out 0s, box-shadow 0.15s ease-out 0s;
+}
+
+.btn-layered-3d:hover {
+  transform: translateY(0.25em);
+}
+
+.btn-layered-3d:hover::before {
+  transform: translate3d(0px, 0.5em, -1em);
+}
+
+.btn-layered-3d--green {
+  color: rgb(59, 165, 84);
+  background: rgb(233, 247, 236);
+  border: 2px solid rgb(59, 165, 84);
+}
+
+.btn-layered-3d--green::before {
+  background: rgb(158, 220, 172);
+  box-shadow: rgb(59, 165, 84) 0px 0px 0px 2px;
+}
+
+.btn-layered-3d--blue {
+  color: rgb(61, 135, 255);
+  background: rgb(214, 230, 255);
+  border: 2px solid rgb(61, 135, 255);
+}
+
+.btn-layered-3d--blue::before {
+  background: rgb(148, 189, 255);
+  box-shadow: rgb(61, 135, 255) 0px 0px 0px 2px;
+}
+
+.btn-layered-3d--red {
+  color: rgb(239, 37, 60);
+  background: rgb(253, 227, 230);
+  border: 2px solid rgb(239, 37, 60);
+}
+
+.btn-layered-3d--red::before {
+  background: rgb(246, 132, 145);
+  box-shadow: rgb(239, 37, 60) 0px 0px 0px 2px;
+}
+
+.extract-text {
+  position: fixed;
+  z-index: 2;
 }
