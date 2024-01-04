@@ -1,0 +1,44 @@
+Original *******************
+
+Noisyimage
+to test
+Tesseract OCR
+
+
+
+
+Denoising *******************
+
+Noisy image
+to test
+Tesseract OCR
+
+
+
+
+Sharpening *******************
+
+Noisy image
+to test
+Tesseract OCR
+
+
+
+
+Edge Detection 1 *******************
+
+Noisy image
+
+
+
+
+Edge Detection 2 *******************
+
+\ vy lo} lo}
+Noisprimage
+tatest
+“Tesseract OWIR
+
+
+
+
