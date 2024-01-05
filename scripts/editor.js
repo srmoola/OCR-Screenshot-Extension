@@ -24,7 +24,7 @@ setTimeout(function () {
   const image = document.getElementById("target");
 
   const cropper = new Cropper(image, {
-    aspectRatio: 16 / 9,
+    aspectRatio: 9 / 16,
     movable: false,
     background: false,
     zoomable: false,
