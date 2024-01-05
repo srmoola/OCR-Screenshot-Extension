@@ -34,10 +34,12 @@ Noisy image
 
 Edge Detection 2 *******************
 
-\ vy lo} lo}
-Noisprimage
-tatest
-“Tesseract OWIR
+Noisy image
+
+a
+to t test
+
+Tesseract OCIR
 
 
 
