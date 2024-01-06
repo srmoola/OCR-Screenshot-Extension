@@ -17,7 +17,7 @@ img = cv.normalize(img, norm_img, 0, 255, cv.NORM_MINMAX)
 img = cv.cvtColor(img, cv.COLOR_RGB2GRAY)
 
 # Denoising
-img = cv.fastNlMeansDenoising(img, None, 50.0, 7, 21)
+img = cv.fastNlMeansDenoising(img, None, 10.0, 7, 21)
 
 # Sharpening
 kernel_sharpening = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
