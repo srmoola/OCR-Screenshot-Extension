@@ -1,6 +1,7 @@
 import cv2 as cv
 import numpy as np
 from base64_img import base64_to_img
+from is_black_or_white import is_black_or_white
 
 
 def return_processed_image(image_in):
@@ -20,8 +21,14 @@ def return_processed_image(image_in):
     kernel_sharpening = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
     img = cv.filter2D(img, -1, kernel_sharpening)
 
+    black_or_white = is_black_or_white(img)
+
     # Thresholding/Binarization
-    img = cv.threshold(
-        img, 0, 255, cv.ADAPTIVE_THRESH_GAUSSIAN_C + cv.ADAPTIVE_THRESH_MEAN_C
-    )[1]
+    if black_or_white == "black":
+        pass
+    elif black_or_white == "white":
+        img = cv.threshold(
+            img, 0, 255, cv.ADAPTIVE_THRESH_GAUSSIAN_C + cv.ADAPTIVE_THRESH_MEAN_C
+        )[1]
+
     return img
