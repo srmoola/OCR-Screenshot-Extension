@@ -21,9 +21,6 @@ def GetTextLink():
 
             if "text_data" in json_data:
                 text_data = json_data["text_data"]
-                f = open("image.txt", "w")
-                f.write(text_data)
-                f.close()
                 img = base64_to_img(text_data)
                 processed_img = return_processed_image(img)
                 get_text = pytesseract.image_to_string(processed_img)

@@ -25,7 +25,7 @@ def return_processed_image(image_in):
 
     # Thresholding/Binarization
     if black_or_white == "black":
-        pass
+        return img
     elif black_or_white == "white":
         img = cv.threshold(
             img, 0, 255, cv.ADAPTIVE_THRESH_GAUSSIAN_C + cv.ADAPTIVE_THRESH_MEAN_C
