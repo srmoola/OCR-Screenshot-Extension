@@ -87,8 +87,11 @@ _Below is an example of how you can instruct your audience on installing and set
    cd OCR_Engine
    ```
 
-4. Install Python Dependencies
+
+4. Install Python Dependencies in Virtual Environment
    ```sh
+   python or python3 -m venv venv
+   
    pip install requirements.txt
    ```
 
@@ -133,5 +136,6 @@ Project Link: [https://github.com/srmoola/OCR-Screenshot-Extension](https://gith
 ## Acknowledgments
 
 * [CropperJS Example - Fengyuan Chen](https://github.com/fengyuanchen/cropperjs)
+* [Pytesseract](https://github.com/madmaze/pytesseract)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
