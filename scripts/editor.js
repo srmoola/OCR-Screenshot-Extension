@@ -24,7 +24,7 @@ setTimeout(function () {
   const image = document.getElementById("target");
 
   const cropper = new Cropper(image, {
-    aspectRatio: 9 / 16,
+    aspectRatio: 21 / 5,
     movable: false,
     background: false,
     zoomable: false,
@@ -35,6 +35,7 @@ setTimeout(function () {
   const closeButton = document.querySelector("dialog button");
   const textDisplay = document.getElementById("ocr-text");
   const copyButton = document.getElementById("copy");
+  const searchButton = document.getElementById("search");
 
   button.addEventListener("click", async () => {
     const croppedImage = cropper.getCroppedCanvas().toDataURL("image/png");
@@ -51,5 +52,11 @@ setTimeout(function () {
   copyButton.addEventListener("click", () => {
     navigator.clipboard.writeText(textDisplay.innerText);
     copyButton.innerText = "Copied!";
+  });
+
+  searchButton.addEventListener("click", () => {
+    window.location.replace(
+      "https://www.google.com/search?q=" + textDisplay.innerText
+    );
   });
 }, 500);

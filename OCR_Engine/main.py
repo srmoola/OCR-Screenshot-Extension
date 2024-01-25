@@ -1,5 +1,3 @@
-import pandas as pd
-import cv2
 from flask import Flask
 from flask_cors import CORS
 
