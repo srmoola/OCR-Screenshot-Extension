@@ -4,23 +4,19 @@
 <br />
 <div align="center">
 
-  <img src="images/ocr.png" alt="Logo" width="80" height="80">
 
-
-  <h3 align="center">Text Extracter Extension</h3>
+  <h3 align="center">Text Extracter Extension (Press on Image for Video Demo)</h3>
+  
+  [![Video Demo](https://i3.ytimg.com/vi/qiRC0G4WhDQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=qiRC0G4WhDQ)
 
   <p align="center">
     Ever wanted to copy something from a website? This extension allows you to copy text even when a website blocks it!
     <br />
     <br />
-    <a href="#Usage">View Demo</a>
+    <a href="https://www.youtube.com/watch?v=qiRC0G4WhDQ">View Demo</a>
   </p>
 </div>
 
-
-
-
-  
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -87,8 +83,11 @@ _Below is an example of how you can instruct your audience on installing and set
    cd OCR_Engine
    ```
 
-4. Install Python Dependencies
+
+4. Install Python Dependencies in Virtual Environment
    ```sh
+   python or python3 -m venv venv
+   
    pip install requirements.txt
    ```
 
@@ -105,19 +104,6 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-<p id="Usage"></p>
-
-Press Extension on any website and put the Crop Box around text you want. Then press the "Extract Text" button!
-
-* Video Demo will be out soon!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 <!-- CONTACT -->
 ## Contact
 
@@ -133,5 +119,6 @@ Project Link: [https://github.com/srmoola/OCR-Screenshot-Extension](https://gith
 ## Acknowledgments
 
 * [CropperJS Example - Fengyuan Chen](https://github.com/fengyuanchen/cropperjs)
+* [Pytesseract](https://github.com/madmaze/pytesseract)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
